@@ -119,23 +119,6 @@ student_performance_tracker/
 
 ---
 
-## **Future Enhancements**
-- Add functionality for exporting performance reports as PDFs.
-- Include authentication for teachers to manage student data securely.
-- Extend subject categories dynamically.
-
----
-
-## **Contributing**
-Contributions are welcome! Please follow these steps:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -m "Add feature"`).
-4. Push the branch (`git push origin feature-branch`).
-5. Open a pull request.
-
----
-
 ## **License**
 This project is licensed under the GNU License. See the [LICENSE](LICENSE) file for details.
 
