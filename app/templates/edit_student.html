@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="mt-5">
+    <h2>Edit Student</h2>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Student Name</label>
+            <input type="text" name="name" id="name" class="form-control" value="{{ student.name }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="math_score" class="form-label">Math Score</label>
+            <input type="number" name="math_score" id="math_score" class="form-control" value="{{ student.math_score }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="science_score" class="form-label">Science Score</label>
+            <input type="number" name="science_score" id="science_score" class="form-control" value="{{ student.science_score }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="english_score" class="form-label">English Score</label>
+            <input type="number" name="english_score" id="english_score" class="form-control" value="{{ student.english_score }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+{% endblock %}

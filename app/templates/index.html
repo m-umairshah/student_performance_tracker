@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center mt-5">
+    <h1>Welcome to the Student Performance Tracker</h1>
+    <p class="lead">Effortlessly manage and track student performance with our easy-to-use platform.</p>
+    <div class="mt-4">
+        <a href="{{ url_for('main.add_student') }}" class="btn btn-primary btn-lg">Add Student</a>
+        <a href="{{ url_for('main.performance') }}" class="btn btn-success btn-lg">View Performance</a>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Features</h2>
+    <div class="row">
+        <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Add Students</h5>
+                    <p class="card-text">Easily add students and their scores in multiple subjects. Track individual performance with accuracy.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Analyze Performance</h5>
+                    <p class="card-text">View student averages, pass/fail status, and overall class performance in a single dashboard.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Edit & Delete Records</h5>
+                    <p class="card-text">Make corrections or remove students as needed with just a few clicks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Why Choose Us?</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Replace the src attribute with the actual path to your image -->
+            <img src="{{ url_for('static', filename='images/performance-tracker.jpg') }}" 
+                 class="img-fluid rounded shadow" 
+                 alt="Student Performance Tracker" style="
+                 height: 279px;
+                 width: 610px;
+             ">
+        </div>
+        <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">✅ Simple and user-friendly interface.</li>
+                <li class="list-group-item">✅ Secure and persistent data storage.</li>
+                <li class="list-group-item">✅ Comprehensive performance analysis tools.</li>
+                <li class="list-group-item">✅ Fully responsive design for any device.</li>
+                <li class="list-group-item">✅ Built with robust and reliable technologies.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<footer class="text-center mt-5 py-3 bg-light">
+    <p>&copy; 2024 Student Performance Tracker | Designed by Muhammad Umair</p>
+</footer>
+{% endblock %}

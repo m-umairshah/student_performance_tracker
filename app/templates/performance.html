@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="mt-5">
+    <h2>Student Performance</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Math</th>
+                <th>Science</th>
+                <th>English</th>
+                <th>Average</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.math_score }}</td>
+                <td>{{ student.science_score }}</td>
+                <td>{{ student.english_score }}</td>
+                <td>{{ student.calculate_average() }}</td>
+                <td>{{ "Passing" if student.is_passing() else "Failing" }}</td>
+                <td>
+                    <a href="{{ url_for('main.edit_student', id=student.id) }}" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="{{ url_for('main.delete_student', id=student.id) }}" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h3>Class Average: {{ class_average }}</h3>
+</div>
+{% endblock %}
